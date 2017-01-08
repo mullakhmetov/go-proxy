@@ -1,0 +1,14 @@
+{
+    "services": {
+        "app": {
+            "bind": "9080",
+            "backends": ["http://localhost:9081", "http://localhost:9082"],
+            "balance": "roundrobin"
+        },
+        "db": {
+            "bind": "5432",
+            "backends": ["http://localhost:5433", "http://localhost:5434"],
+            "balance": "random"
+        }
+    }
+}
